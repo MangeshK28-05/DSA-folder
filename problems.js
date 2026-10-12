@@ -25,3 +25,14 @@ function containsDuplicateOptimal(arr){
     return false
 }
 console.log(containsDuplicateOptimal([1,1,3,4]))
+
+// valid anagram
+function validAnagram(s,t){
+    if(s.length !== t.length) return false
+
+   const sSplit = s.split('').sort().join('')
+   const tSplit = t.split('').sort().join('')
+
+    if(sSplit === tSplit ) return true
+    else return false
+}
