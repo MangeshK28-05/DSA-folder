@@ -47,3 +47,18 @@ function validAnagram(s,t){
     else return false
 }
 ```
+
+# Concatenation of Array
+
+- **Difficulty:** Easy
+- **NeetCode Category:** Array & Hashing
+
+```javascript
+function concatnationArray(arr){
+    let newArr = []
+    for(let i = 0; i <arr.length ; i++){
+        newArr.push(arr[i])
+    }
+    return [...arr , ...newArr]
+}
+```

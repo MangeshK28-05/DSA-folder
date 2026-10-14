@@ -10,7 +10,6 @@ function containsDuplicate(arr){
 }
 return false
 }
-console.log(containsDuplicate([1,2,8,3]))
 
 // optimal 
 function containsDuplicateOptimal(arr){
@@ -24,7 +23,6 @@ function containsDuplicateOptimal(arr){
     }
     return false
 }
-console.log(containsDuplicateOptimal([1,1,3,4]))
 
 // valid anagram
 function validAnagram(s,t){
@@ -35,4 +33,13 @@ function validAnagram(s,t){
 
     if(sSplit === tSplit ) return true
     else return false
+}
+
+// Concatenation of Array Input: nums = [1,4,1,2] Output: [1,4,1,2,1,4,1,2].
+function concatnationArray(arr){
+    let newArr = []
+    for(let i = 0; i <arr.length ; i++){
+        newArr.push(arr[i])
+    }
+    return [...arr , ...newArr]
 }
