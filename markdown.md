@@ -62,3 +62,36 @@ function concatnationArray(arr){
     return [...arr , ...newArr]
 }
 ```
+
+#Find the smallest positive missing number from an array
+- **Diificulty:** Hard
+- **NeetCode Category:** Array & Hashing
+
+### solved set and for loop approach
+```javascript
+function findMissig(nums) {
+    nums.sort((a, b) => a - b);
+
+    let missing = 1;
+
+    for (let num of nums) {
+        if (num === missing) {
+            missing++;
+        }
+    }
+
+    return missing;
+};
+```
+```javascript
+function findMissing(nums){
+    const numSet = new Set(nums);
+    
+    let missing = 1;
+    while (numSet.has(missing)) {
+        missing++;
+    }
+    
+    return missing;
+}
+```

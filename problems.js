@@ -43,3 +43,18 @@ function concatnationArray(arr){
     }
     return [...arr , ...newArr]
 }
+
+// first missing positive
+function findMissing (nums) {
+    nums.sort((a, b) => a - b)
+
+    let missing = 1
+
+    for (let num of nums) {
+        if (num === missing) {
+            missing++
+        }
+    }
+
+    return missing
+}
