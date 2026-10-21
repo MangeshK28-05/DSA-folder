@@ -58,3 +58,44 @@ function findMissing (nums) {
 
     return missing
 }
+
+// Majority element
+function MajorityElement (nums) {
+    let theBigMajorityCount = nums.length/2
+    let maxfreq = nums[0]
+    for(let i = 0 ; i < nums.length; i++){
+        let ElemCount = 0
+        for(let j = 0; j<nums.length ; j++){
+            if(nums[i] === nums[j]){
+                ElemCount++
+            }
+        }
+    if(ElemCount > theBigMajorityCount){
+        maxfreq = nums[i]
+    }
+    }
+    return maxfreq
+    }
+
+//part 2 using set
+function findJewls(jewels, stones){
+    let set = new Set()
+    let count = 0
+    for ( let i = 0 ; i < jewels.length ; i++){
+        let ch = jewels.charAt(i)
+        set.add(ch)
+    }
+    for(let i = 0 ; i < stones.length ; i++){
+        if(set.has(ch))
+            count++
+    }
+    return count
+}
+
+// check panagram (using set)
+
+function checkPana(sentence){
+    let set = new Set(sentence)
+    if(set.size != 26) return false
+    else return true 
+}
