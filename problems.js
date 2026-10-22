@@ -117,3 +117,24 @@ for(let i = 1 ; i < arr.length ; i++){
 }
 return theBigProfit
 }
+
+// move zeros with two different methods
+function moveZerosToEnd(arr) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] === 0) {
+            arr.splice(i, 1);
+            arr.push(0);
+        }
+    }
+    return arr;
+}
+
+function moveZerosToEndTwo (nums) {
+let nonZeros = nums.filter(n => n !== 0);
+let zeros = nums.filter(n => n === 0);
+
+let merged = [...nonZeros, ...zeros];
+
+for (let i = 0; i < nums.length; i++) {
+    nums[i] = merged[i];
+}}
