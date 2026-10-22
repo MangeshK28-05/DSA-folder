@@ -141,10 +141,33 @@ function findMissing(nums){
 - **Diificulty:** easy
 - **Category:** hash table
 
-``javascript
+```javascript
 function checkPana(sentence){
     let set = new Set(sentence)
     if(set.size != 26) return false
     else return true 
+}
+```
+# Best time to buy and sell the stock
+
+- **Difficulty:** Easy
+- **Category:** Array
+
+```javascript
+function maxProfit(arr){
+let minProfit = prices[0]
+let theBigProfit = 0
+
+for(let i = 1 ; i < arr.length ; i++){
+    if(arr[i]<minProfit){
+        minProfit = prices[i]
+    }
+    let profit = prices[i]-minProfit
+
+    if(profit > theBigProfit){
+        theBigProfit = profit
+    }
+}
+return theBigProfit
 }
 ```

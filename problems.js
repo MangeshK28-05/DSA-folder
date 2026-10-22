@@ -99,3 +99,21 @@ function checkPana(sentence){
     if(set.size != 26) return false
     else return true 
 }
+
+// best time to buy and sell stock
+function maxProfit(arr){
+let minProfit = prices[0]
+let theBigProfit = 0
+
+for(let i = 1 ; i < arr.length ; i++){
+    if(arr[i]<minProfit){
+        minProfit = prices[i]
+    }
+    let profit = prices[i]-minProfit
+
+    if(profit > theBigProfit){
+        theBigProfit = profit
+    }
+}
+return theBigProfit
+}
